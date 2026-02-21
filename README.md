@@ -8,6 +8,16 @@ healthcare analytics.
 
 ---
 
+## Why I Built This
+
+When working with healthcare data, I noticed that adherence reporting is usually descriptive — it tells you what happened, not who is likely to fall off track next.
+
+I wanted to build a realistic, end-to-end pipeline that moves from historical refill behavior to proactive intervention scoring. The goal wasn’t just high ROC-AUC, but understanding which behavioral signals truly drive non-adherence and how threshold decisions affect operational tradeoffs (e.g., false negatives vs intervention cost).
+
+This project simulates what a lightweight early-warning system could look like in practice — from feature engineering to model evaluation and interpretability.
+
+---
+
 ## What this does
 
 Medication non-adherence costs the US healthcare system an estimated $300B+ annually
@@ -26,14 +36,6 @@ runs locally without a database.
 
 ---
 
-## Why I Built This
-
-When working with healthcare data, I noticed that adherence reporting is usually descriptive. It tells you what happened, not who is likely to fall off track next.
-
-I wanted to build a small but realistic pipeline that moves from historical refill behavior to proactive intervention scoring. The objective wasn’t just to maximize ROC-AUC, but to understand which behavioral features actually drive non-adherence and how threshold decisions affect operational tradeoffs (e.g., false negatives vs intervention cost).
-This project is meant to simulate what a lightweight early-warning system could look like in practice from feature engineering to model evaluation and interpretability.
-
----
 
 ## Repository structure
 
