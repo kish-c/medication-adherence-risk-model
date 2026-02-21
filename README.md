@@ -26,6 +26,15 @@ runs locally without a database.
 
 ---
 
+## Why I Built This
+
+When working with healthcare data, I noticed that adherence reporting is usually descriptive. It tells you what happened, not who is likely to fall off track next.
+
+I wanted to build a small but realistic pipeline that moves from historical refill behavior to proactive intervention scoring. The objective wasn’t just to maximize ROC-AUC, but to understand which behavioral features actually drive non-adherence and how threshold decisions affect operational tradeoffs (e.g., false negatives vs intervention cost).
+This project is meant to simulate what a lightweight early-warning system could look like in practice from feature engineering to model evaluation and interpretability.
+
+---
+
 ## Repository structure
 
 ```
@@ -171,6 +180,16 @@ with adherence. Current features are pharmacy-data-only.
 worsening?) would capture trajectory, not just snapshot. Patients heading in the
 wrong direction are a different risk profile than patients with a stable history
 of borderline adherence.
+
+---
+
+## Limitations & Design Tradeoffs
+
+Early iterations suffered from feature leakage when refill gap features were constructed too close to the prediction window, artificially inflating performance. Feature windows were adjusted to better simulate real-world forecasting conditions.
+
+While Random Forest slightly outperformed Logistic Regression on ROC-AUC, Logistic Regression offered stronger interpretability — an important consideration in healthcare contexts where stakeholders need explainable risk drivers.
+
+The dataset is synthetic. Although designed to resemble real pharmacy claims patterns, calibration behavior and feature distributions may differ from real-world adherence data, where noise and behavioral variability are higher.
 
 ---
 
