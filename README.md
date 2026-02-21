@@ -187,7 +187,7 @@ of borderline adherence.
 
 Early iterations suffered from feature leakage when refill gap features were constructed too close to the prediction window, artificially inflating performance. Feature windows were adjusted to better simulate real-world forecasting conditions.
 
-While Random Forest slightly outperformed Logistic Regression on ROC-AUC, Logistic Regression offered stronger interpretability — an important consideration in healthcare contexts where stakeholders need explainable risk drivers.
+While Random Forest slightly outperformed Logistic Regression on ROC-AUC, Logistic Regression offered stronger interpretability, an important consideration in healthcare contexts where stakeholders need explainable risk drivers.
 
 The dataset is synthetic. Although designed to resemble real pharmacy claims patterns, calibration behavior and feature distributions may differ from real-world adherence data, where noise and behavioral variability are higher.
 
